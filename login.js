@@ -13,8 +13,15 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
     if (user) {
         // Сохраняем информацию о пользователе в localStorage
         localStorage.setItem("loggedInUser", JSON.stringify(user));
+        
+        // Вместо перенаправления на страницу, показываем сообщение об успешном входе
         alert("Добро пожаловать, " + username + "!");
-        window.location.href = "index.html"; // Перенаправляем на главную страницу
+        
+        // Пример добавления другого действия (например, скрытие формы и отображение информации о пользователе)
+        document.getElementById("loginForm").style.display = "none"; // Прячем форму авторизации
+        const loggedInMessage = document.createElement("p");
+        loggedInMessage.textContent = `Вы вошли как: ${username}`;
+        document.body.appendChild(loggedInMessage); // Отображаем имя пользователя на странице
     } else {
         alert("Неправильное имя пользователя или пароль.");
     }
