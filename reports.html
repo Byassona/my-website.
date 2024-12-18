@@ -34,6 +34,14 @@
                     <a href="task3.pdf" target="_blank" class="btn">Скачать</a>
                 </div>
             </div>
+
+            <!-- Фото админа -->
+            <div class="admin-container">
+                <div class="admin-image" id="adminImage">
+                    <img src="admin1.jpg" alt="Админ" class="admin-photo">
+                </div>
+                <p class="admin-name">Админ</p>
+            </div>
         </div>
     </main>
 
@@ -42,5 +50,17 @@
             <p>&copy; 2024 Современный сайт. Все права защищены.</p>
         </div>
     </footer>
+
+    <script>
+        const adminImage = document.getElementById("adminImage");
+
+        adminImage.addEventListener("mouseover", () => {
+            document.querySelector(".admin-photo").src = "admin2.jpg"; // Изменение на второе фото
+        });
+
+        adminImage.addEventListener("mouseout", () => {
+            document.querySelector(".admin-photo").src = "admin1.jpg"; // Возврат к первому фото
+        });
+    </script>
 </body>
 </html>
