@@ -4,73 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Современный сайт</title>
-    <!-- Подключаем стили -->
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Шапка -->
-    <header>
+    <header class="hero">
         <div class="container">
-            <h1>Современный сайт</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
+            <h1 class="hero-title">Добро пожаловать</h1>
+            <p class="hero-subtitle">Современные решения для вашего успеха</p>
+            <a href="#services" class="btn hero-btn">Наши услуги</a>
         </div>
     </header>
 
     <!-- Основной контент -->
     <main>
+        <!-- Услуги -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">Наши услуги</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Разработка сайтов</h3>
+                        <p>Мы создаем адаптивные и современные сайты.</p>
+                        <a href="#contact" class="btn">Подробнее</a>
+                    </div>
+                    <div class="card">
+                        <h3>SEO-оптимизация</h3>
+                        <p>Поможем вашему сайту быть на первых местах в поисковиках.</p>
+                        <a href="#contact" class="btn">Подробнее</a>
+                    </div>
+                    <div class="card">
+                        <h3>Отчеты</h3>
+                        <p>Готовые решения для зачета или экзамена.</p>
+                        <a href="reports.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- О нас -->
-        <section id="about" class="section">
+        <section id="about" class="section dark-bg">
             <div class="container">
-                <h2>О нас</h2>
-                <p>Мы создаем современные, адаптивные и стильные веб-сайты для вашего успеха в интернете.</p>
-            </div>
-        </section>
-
-        <!-- Услуги с карточками -->
-        <section id="services" class="section dark-bg">
-    <div class="container">
-        <h2>Наши услуги</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Разработка сайтов</h3>
-                <p>Современные и адаптивные решения для бизнеса и личных проектов.</p>
-            </div>
-            <div class="card">
-                <h3>SEO-оптимизация</h3>
-                <p>Повышение позиций вашего сайта в поисковых системах.</p>
-            </div>
-            <div class="card">
-                <h3>Отчеты</h3>
-                <p>Готовые решения для успешной сдачи зачетов и экзаменов.</p>
-                <a href="reports.html" class="btn">Подробнее</a>
-            </div>
-        </div>
-    </div>
-        </section>
-
-        <!-- Донат -->
-        <section id="donate" class="section">
-            <div class="container">
-                 <h2>Поддержите проект</h2>
-                 <p>Если вам понравился наш сайт, вы можете поддержать разработчика!</p>
-                 <!-- Кнопка для перехода -->
-                 <a href="support.html" class="btn donate-btn">Поддержка</a>
+                <h2 class="section-title">О нас</h2>
+                <p>Мы команда профессионалов, создающих уникальные проекты с вниманием к деталям.</p>
             </div>
         </section>
 
         <!-- Контакты -->
-        <section id="contact" class="section dark-bg">
+        <section id="contact" class="section">
             <div class="container">
-                <h2>Контакты</h2>
-                <p>Свяжитесь с нами по почте: <a href="mailto:ustarhanovbilal@gmail.com">ustarhanovbilal@gmail.com</a></p>
+                <h2 class="section-title">Связаться с нами</h2>
+                <p>Напишите нам: <a href="mailto:info@example.com">info@example.com</a></p>
             </div>
         </section>
     </main>
@@ -81,8 +68,5 @@
             <p>&copy; 2024 Современный сайт. Все права защищены.</p>
         </div>
     </footer>
-
-    <!-- Скрипт -->
-    <script src="script.js"></script>
 </body>
 </html>
