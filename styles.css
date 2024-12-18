@@ -162,3 +162,40 @@ footer {
     padding: 1.5rem 0;
     font-size: 0.9rem;
 }
+
+/* Стиль страницы поддержки в стиле Сбера */
+.sber-style {
+    background-color: #ffffff; /* Белый фон */
+    color: #4CAF50; /* Зеленый цвет текста */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.sber-style header {
+    background: #4CAF50; /* Зеленый фон */
+    color: white;
+    padding: 2rem 0;
+}
+
+.sber-style header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.sber-style a.btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sber-style a.btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
