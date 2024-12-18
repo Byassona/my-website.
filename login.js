@@ -26,3 +26,13 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
         alert("Неправильное имя пользователя или пароль.");
     }
 });
+
+const logoutButton = document.createElement("button");
+logoutButton.textContent = "Выйти";
+logoutButton.addEventListener("click", () => {
+    localStorage.removeItem("loggedInUser");
+    alert("Вы вышли из системы.");
+    location.reload(); // Перезагружаем страницу
+});
+
+document.body.appendChild(logoutButton); // Добавляем кнопку "Выйти"
