@@ -8,17 +8,26 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать на главную страницу!</h1>
-        <button id="logoutButton" class="btn">Выйти</button>
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Добро пожаловать на главную страницу!</h1>
+            <p class="hero-subtitle">Здесь можно найти все материалы и отчеты.</p>
+            <button id="logoutButton" class="btn hero-btn">Выйти</button>
+        </div>
     </header>
 
-    <main>
-        <p>Это главная страница вашего сайта.</p>
+    <main class="section">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <p>На этой странице вы найдете все отчеты и материалы, которые доступны после авторизации.</p>
+            <a href="reports.html" class="btn">Перейти к отчетам</a>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Современный сайт. Все права защищены.</p>
+        <div class="container">
+            <p>&copy; 2024 Современный сайт. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>
