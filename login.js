@@ -1,18 +1,19 @@
 document.getElementById("loginForm").addEventListener("submit", (event) => {
     event.preventDefault(); // Останавливаем отправку формы
 
-    // Простая эмуляция входа (реально использовать сервер)
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    // Простая проверка (замените на серверную валидацию)
-    if (username === "admin" && password === "1234") {
-        // Сохраняем информацию о входе
-        localStorage.setItem("isLoggedIn", "true");
+    // Получаем список зарегистрированных пользователей из localStorage
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-        // Перенаправляем на главную страницу
-        window.location.href = "index.html";
+    // Проверяем, есть ли такой пользователь
+    const user = users.find(user => user.username === username && user.password === password);
+
+    if (user) {
+        alert("Добро пожаловать, " + username + "!");
+        window.location.href = "index.html"; // Перенаправляем на главную страницу
     } else {
-        alert("Неправильные имя пользователя или пароль!");
+        alert("Неправильное имя пользователя или пароль.");
     }
 });
