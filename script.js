@@ -4,6 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Если пользователь не авторизован, перенаправляем на страницу авторизации
     if (!isLoggedIn) {
-        window.location.href = "login.html";
+        window.location.href = "login.html"; // Перенаправляем на страницу авторизации
     }
 });
