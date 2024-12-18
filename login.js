@@ -20,11 +20,4 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
     } else {
         alert("Неправильное имя пользователя или пароль.");
     }
-document.addEventListener("DOMContentLoaded", () => {
-    const loggedInUser = localStorage.getItem("loggedInUser");
-    
-    if (loggedInUser) {
-        // Если пользователь уже авторизован, перенаправляем его на главную страницу
-        window.location.href = "index.html";
-    }
 });
