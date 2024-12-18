@@ -1,4 +1,3 @@
-// Проверка авторизации
 document.addEventListener("DOMContentLoaded", () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
