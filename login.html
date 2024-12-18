@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авторизация</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="login.js" defer></script>
+    <title>Выход</title>
+    <script>
+        // Удаляем информацию о пользователе из localStorage
+        localStorage.removeItem('loggedInUser');
+        // Перенаправляем на страницу авторизации
+        window.location.href = "login.html";
+    </script>
 </head>
 <body>
-    <div class="auth-container">
-        <h1>Авторизация</h1>
-        <form id="loginForm">
-            <label for="username">Имя пользователя</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Пароль</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit" class="btn">Войти</button>
-        </form>
-        <p>Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
-    </div>
+    <p>Выход из системы...</p>
 </body>
 </html>
