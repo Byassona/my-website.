@@ -186,26 +186,3 @@ footer {
     background: #45a049;
     transform: scale(1.05);
 }
-
-.admin-container {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.admin-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.admin-container:hover .admin-photo {
-    transform: scale(1.1);
-}
-
-.admin-name {
-    font-size: 1.2rem;
-    color: #333;
-    margin-top: 10px;
-    font-weight: 600;
-}
