@@ -147,3 +147,42 @@ footer {
     font-size: 1.2rem;
     margin-top: 1rem;
 }
+
+/* Оформление страницы Сбера */
+.sber-page {
+    background: #f8f9fa;
+    color: #4CAF50; /* Цвет в стиле Сбера */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sber-page header {
+    background: #4CAF50;
+    color: white;
+    padding: 2rem 0;
+}
+
+.sber-page .section-title {
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+.sber-page img {
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+}
+
+.sber-page a.btn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sber-page a.btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
