@@ -8,18 +8,21 @@
     <script src="login.js" defer></script>
 </head>
 <body>
-    <div class="auth-container">
-        <h1>Авторизация</h1>
+    <header class="auth-header">
+        <div class="container">
+            <h1>Авторизация</h1>
+        </div>
+    </header>
+
+    <main class="auth-container">
         <form id="loginForm">
             <label for="username">Имя пользователя:</label>
             <input type="text" id="username" required>
-
             <label for="password">Пароль:</label>
             <input type="password" id="password" required>
-
-            <button type="submit" class="btn">Войти</button>
+            <button type="submit">Войти</button>
         </form>
         <p>Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
-    </div>
+    </main>
 </body>
 </html>
