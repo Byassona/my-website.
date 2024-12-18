@@ -17,60 +17,129 @@ a {
     color: inherit;
 }
 
-/* Стиль для страницы авторизации */
-.auth-container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+.container {
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    margin-top: 100px; /* Центрирование формы */
+    padding: 2rem 0;
 }
 
-.auth-container h1 {
-    font-size: 2rem;
-    color: #2575fc;
-    margin-bottom: 1rem;
-}
-
-.auth-container label {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-.auth-container input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.auth-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2575fc;
+/* Шапка */
+.hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    text-align: center;
+    padding: 100px 0;
 }
 
-.auth-container button:hover {
-    background-color: #6a11cb;
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-.auth-container p a {
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero-btn {
+    background: white;
+    color: #6a11cb;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #f4f4f9;
     color: #2575fc;
-    text-decoration: none;
+    transform: scale(1.05);
 }
 
-.auth-container p a:hover {
-    text-decoration: underline;
+/* Секции */
+.section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Карточки */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: #2575fc;
+}
+
+.card p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.card a.btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card a.btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+}
+
+/* Подвал */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Стиль страницы отчета */
+.hero-report {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-report .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-report .hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
