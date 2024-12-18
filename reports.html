@@ -3,45 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отчёты</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Регистрация</title>
+    <script src="register.js" defer></script>
 </head>
 <body>
-    <header class="hero-report">
-        <div class="container">
-            <h1 class="hero-title">Отчёты для зачёта</h1>
-            <p class="hero-subtitle">Готовые задания, которые помогут вам успешно сдать зачёт.</p>
-        </div>
-    </header>
-
-    <main class="section" id="main-content">
-        <div class="container">
-            <h2 class="section-title">Список отчётов</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Задание 1</h3>
-                    <p>Полный разбор задания с теорией и примерами. PDF-формат.</p>
-                    <a href="task1.pdf" target="_blank" class="btn">Скачать</a>
-                </div>
-                <div class="card">
-                    <h3>Задание 2</h3>
-                    <p>Практическая часть с подробным объяснением. PDF-формат.</p>
-                    <a href="task2.pdf" target="_blank" class="btn">Скачать</a>
-                </div>
-                <div class="card">
-                    <h3>Задание 3</h3>
-                    <p>Лабораторная работа с пошаговым решением. PDF-формат.</p>
-                    <a href="task3.pdf" target="_blank" class="btn">Скачать</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Современный сайт. Все права защищены.</p>
-        </div>
-    </footer>
+    <h1>Регистрация</h1>
+    <form id="registerForm">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+    <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
 </body>
 </html>
