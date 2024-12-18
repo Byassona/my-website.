@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    
+    if (loggedInUser) {
+        // Если пользователь уже авторизован, перенаправляем его на главную страницу
+        window.location.href = "index.html";
+    }
+});
+
 document.getElementById("loginForm").addEventListener("submit", (event) => {
     event.preventDefault(); // Останавливаем отправку формы
 
@@ -14,9 +23,7 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
         // Сохраняем информацию о пользователе в localStorage
         localStorage.setItem("loggedInUser", JSON.stringify(user));
         alert("Добро пожаловать, " + username + "!");
-        
-        // Перенаправляем на главную страницу
-        window.location.href = "index.html"; // Перенаправление на главную страницу
+        window.location.href = "index.html"; // Перенаправляем на главную страницу
     } else {
         alert("Неправильное имя пользователя или пароль.");
     }
