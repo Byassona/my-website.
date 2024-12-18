@@ -11,6 +11,8 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
     const user = users.find(user => user.username === username && user.password === password);
 
     if (user) {
+        // Сохраняем информацию о пользователе в localStorage
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
         alert("Добро пожаловать, " + username + "!");
         window.location.href = "index.html"; // Перенаправляем на главную страницу
     } else {
