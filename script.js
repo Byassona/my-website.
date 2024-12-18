@@ -1,21 +1,3 @@
-// Регистрация пользователя
-if (document.title === "Регистрация") {
-    document.getElementById("register-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const username = document.getElementById("username").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-
-        // Сохраняем данные пользователя в localStorage
-        localStorage.setItem("user", JSON.stringify({ username, email, password }));
-        alert("Регистрация прошла успешно!");
-
-        // Перенаправляем на страницу авторизации
-        window.location.href = "login.html";
-    });
-}
-
 // Авторизация пользователя
 if (document.title === "Авторизация") {
     document.getElementById("login-form").addEventListener("submit", function (e) {
