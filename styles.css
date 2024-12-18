@@ -130,3 +130,20 @@ footer {
     padding: 1.5rem 0;
     font-size: 0.9rem;
 }
+
+.hero-report {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-report .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-report .hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
