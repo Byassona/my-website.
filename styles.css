@@ -1,4 +1,4 @@
-/* Подключение шрифта и обнуление стилей */
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -7,62 +7,56 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f4f4f9;
+    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
-    color: #0078ff;
-    transition: color 0.3s;
+    color: inherit;
 }
 
-a:hover {
-    color: #0056b3;
-}
-
-ul {
-    list-style: none;
-}
-
-/* Контейнер */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
-}
-
-/* Шапка */
-header {
-    background: linear-gradient(135deg, #0078FF, #00C6FF);
-    color: white;
-    text-align: center;
     padding: 2rem 0;
 }
 
-header h1 {
+/* Шапка */
+.hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-title {
     font-size: 3rem;
     font-weight: 700;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
 
-nav ul li a {
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: white;
-    transition: all 0.3s;
+.hero-btn {
+    background: white;
+    color: #6a11cb;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #FFD700;
+.hero-btn:hover {
+    background: #f4f4f9;
+    color: #2575fc;
+    transform: scale(1.05);
 }
 
 /* Секции */
@@ -72,11 +66,11 @@ nav ul li a:hover {
 }
 
 .section.dark-bg {
-    background: #222;
+    background: #333;
     color: white;
 }
 
-.section h2 {
+.section-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-weight: 700;
@@ -99,150 +93,40 @@ nav ul li a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card h3 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #0078FF;
-}
-
-.card p {
-    color: #555;
-}
-
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Кнопка */
-.btn {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn:hover {
-    background: linear-gradient(135deg, #2575fc, #6a11cb);
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.donate-btn {
-    background: linear-gradient(135deg, #FF416C, #FF4B2B);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 30px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(255, 75, 43, 0.3);
-    display: inline-block;
-    text-align: center;
-}
-
-.donate-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(255, 75, 43, 0.5);
-}
-
-/* Подвал */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.9rem;
-}
-
-/* Стиль страницы поддержки в стиле Сбера */
-.sber-style {
-    background-color: #ffffff; /* Белый фон */
-    color: #4CAF50; /* Зеленый цвет текста */
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.sber-style header {
-    background: #4CAF50; /* Зеленый фон */
-    color: white;
-    padding: 2rem 0;
-}
-
-.sber-style header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.sber-style a.btn {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.sber-style a.btn:hover {
-    background: #45a049;
-    transform: scale(1.05);
-}
-
-/* Карточки для заданий */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.card {
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 2rem;
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
 .card h3 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #0078FF;
+    color: #2575fc;
 }
 
 .card p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: #555;
 }
 
 .card a.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    font-size: 1rem;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .card a.btn:hover {
     background: linear-gradient(135deg, #2575fc, #6a11cb);
     transform: scale(1.05);
+}
+
+/* Подвал */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
 }
