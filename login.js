@@ -1,19 +1,15 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Останавливаем стандартную отправку формы
+document.getElementById('login-form').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+  const storedUser = localStorage.getItem(username);
 
-    // Находим пользователя по имени и паролю
-    const user = users.find(user => user.username === username && user.password === password);
-
-    if (user) {
-        // Если пользователь найден, сохраняем информацию о том, что пользователь авторизован
-        localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "index.html"; // Перенаправляем на главную страницу
-    } else {
-        alert("Неверное имя пользователя или пароль.");
-    }
+  if (storedUser && JSON.parse(storedUser).password === password) {
+    alert('Вход выполнен успешно!');
+    window.location.href = 'index.html';
+  } else {
+    alert('Неверное имя пользователя или пароль!');
+  }
 });
