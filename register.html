@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Регистрация</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <form id="register-form">
-    <h2>Регистрация</h2>
-    <input type="text" id="reg-username" placeholder="Имя пользователя" required>
-    <input type="password" id="reg-password" placeholder="Пароль" required>
-    <button type="submit" class="btn">Зарегистрироваться</button>
-    <p>Уже есть аккаунт? <a href="login.html">Авторизация</a></p>
-  </form>
-  <script src="register.js"></script>
-</body>
-</html>
+<form id="register-form">
+  <h2>Регистрация</h2>
+  <input type="text" id="reg-username" placeholder="Имя пользователя" required>
+  <input type="password" id="reg-password" placeholder="Пароль" required>
+  <button type="submit" class="btn">Зарегистрироваться</button>
+</form>
+<script>
+  document.getElementById('register-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('reg-username').value;
+    const password = document.getElementById('reg-password').value;
+    if (localStorage.getItem(username)) {
+      alert('Такой пользователь уже существует!');
+    } else {
+      localStorage.setItem(username, JSON.stringify({ password }));
+      alert('Регистрация успешна!');
+      window.location.href = 'login.html';
+    }
+  });
+</script>
