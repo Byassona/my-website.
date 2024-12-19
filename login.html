@@ -1,17 +1,18 @@
 <form id="login-form">
-  <h2>Авторизация</h2>
+  <h2>Вход в систему</h2>
   <input type="text" id="username" placeholder="Имя пользователя" required>
   <input type="password" id="password" placeholder="Пароль" required>
   <button type="submit" class="btn">Войти</button>
-  <p>Нет аккаунта? <a href="register.html">Регистрация</a></p>
 </form>
 <script>
   document.getElementById('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
+
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+
+    // Проверяем пользователя
     const storedUser = JSON.parse(localStorage.getItem(username));
-    
     if (storedUser && storedUser.password === password) {
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('username', username);
