@@ -3,26 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
+  <title>Главная страница</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Добро пожаловать на сайт</h1>
+      <p id="welcome-message"></p>
     </header>
-
-    <div class="content">
-      <p>Добро пожаловать, <span id="username-display"></span>!</p>
-      <button id="buy-pro-btn" style="display:none;">Купить PRO версию</button>
-      <button id="go-to-reports" style="display:none;">Перейти к отчётам</button>
-    </div>
-
+    <main>
+      <button id="buy-pro-btn" style="display: none;">Купить PRO версию</button>
+      <button id="go-to-reports" style="display: none;">Перейти к отчётам</button>
+    </main>
     <footer>
       <button id="logout-btn">Выйти</button>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
