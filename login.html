@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авторизация</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="login.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="auth-container">
-        <h1>Авторизация</h1>
-        <form id="loginForm">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" required>
-            <br>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" required>
-            <br>
-            <button type="submit">Войти</button>
-        </form>
-        <p>Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
-    </div>
+  <form id="login-form">
+    <h2>Авторизация</h2>
+    <input type="text" id="username" placeholder="Имя пользователя" required>
+    <input type="password" id="password" placeholder="Пароль" required>
+    <button type="submit" class="btn">Войти</button>
+    <p>Нет аккаунта? <a href="register.html">Регистрация</a></p>
+  </form>
+  <script src="login.js"></script>
 </body>
 </html>
