@@ -18,7 +18,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
   const password = document.getElementById('password').value;
 
   // Проверяем, если это ваш админский аккаунт
-  if (username === 'admin' && password === 'admin123') {
+  if (username === 'Byassona' && password === 'Bilal57895') {
     localStorage.setItem('isLoggedIn', 'true');
     localStorage.setItem('username', username);
     localStorage.setItem('isAdmin', 'true'); // Устанавливаем статус администратора
