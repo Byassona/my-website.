@@ -31,5 +31,22 @@
       window.location.href = 'login.html';
     }
   </script>
+  <script>
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  const isPro = localStorage.getItem('proUser') === 'true';
+
+  // Проверка авторизации
+  if (!isLoggedIn) {
+    alert('Пожалуйста, войдите в систему!');
+    window.location.href = 'login.html';
+  }
+
+  // Проверка доступа (админ или PRO)
+  if (!isAdmin && !isPro) {
+    alert('Эта страница доступна только для PRO-пользователей!');
+    window.location.href = 'index.html';
+  }
+  </script>
 </body>
 </html>
