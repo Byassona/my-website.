@@ -3,60 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная страница</title>
+  <title>Главная</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Шапка -->
-  <header class="header">
-    <div class="container">
-      <h1>Мой сайт</h1>
-      <nav class="nav">
-        <ul>
-          <li><a href="#reports">Отчёт</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1>Добро пожаловать</h1>
   </header>
-
-  <!-- Раздел "Отчёт" -->
-  <section id="reports" class="section">
-    <div class="container">
-      <h2>Отчёты</h2>
-      <div class="report-card">
-        <h3>Отчёт 1</h3>
-        <p>Описание задания.</p>
-        <a href="report1.pdf" download class="btn">Скачать PDF</a>
-      </div>
-      <div class="report-card">
-        <h3>Отчёт 2</h3>
-        <p>Описание задания.</p>
-        <a href="report2.pdf" download class="btn">Скачать PDF</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Раздел "Контакты" -->
-  <section id="contacts" class="section">
-    <div class="container">
-      <h2>Контакты</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="email" placeholder="Ваш email" required>
-        <textarea placeholder="Ваше сообщение" required></textarea>
-        <button type="submit" class="btn">Отправить</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Подвал -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2024 Мой сайт. Все права защищены.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <main>
+    <p>Вы успешно вошли в систему!</p>
+    <a href="login.html" class="btn">Выйти</a>
+  </main>
 </body>
 </html>
