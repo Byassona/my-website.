@@ -13,26 +13,18 @@
   <main>
     <div class="report-card">
       <h2>Задание 1</h2>
-      <p>Описание задания 1.</p>
       <a href="tasks/task1.pdf" download class="btn">Скачать</a>
     </div>
     <div class="report-card">
       <h2>Задание 2</h2>
-      <p>Описание задания 2.</p>
       <a href="tasks/task2.pdf" download class="btn">Скачать</a>
-    </div>
-    <div class="report-card">
-      <h2>Задание 3</h2>
-      <p>Описание задания 3.</p>
-      <a href="tasks/task3.pdf" download class="btn">Скачать</a>
     </div>
     <a href="index.html" class="btn">Вернуться на главную</a>
   </main>
   <script>
-    // Проверяем доступ пользователя
-    if (localStorage.getItem('proUser') !== 'true') {
-      alert('Купите PRO для доступа к этой странице!');
-      window.location.href = 'index.html';
+    if (localStorage.getItem('isLoggedIn') !== 'true' || localStorage.getItem('proUser') !== 'true') {
+      alert('Требуется авторизация и покупка PRO!');
+      window.location.href = 'login.html';
     }
   </script>
 </body>
