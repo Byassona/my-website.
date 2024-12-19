@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Авторизация</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <form id="login-form">
-    <h2>Авторизация</h2>
-    <input type="text" id="username" placeholder="Имя пользователя" required>
-    <input type="password" id="password" placeholder="Пароль" required>
-    <button type="submit" class="btn">Войти</button>
-    <p>Нет аккаунта? <a href="register.html">Регистрация</a></p>
-  </form>
-  <script src="login.js"></script>
-</body>
-</html>
+<form id="login-form">
+  <h2>Авторизация</h2>
+  <input type="text" id="username" placeholder="Имя пользователя" required>
+  <input type="password" id="password" placeholder="Пароль" required>
+  <button type="submit" class="btn">Войти</button>
+  <p>Нет аккаунта? <a href="register.html">Регистрация</a></p>
+</form>
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const storedUser = localStorage.getItem(username);
+    if (storedUser && JSON.parse(storedUser).password === password) {
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('username', username);
+      alert('Вход выполнен успешно!');
+      window.location.href = 'index.html';
+    } else {
+      alert('Неверные данные!');
+    }
+  });
+</script>
