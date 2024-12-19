@@ -1,5 +1,5 @@
 const express = require('express');
-const stripe = require('stripe')('YOUR_SECRET_KEY'); // Секретный ключ Stripe
+const stripe = require('stripe')('YOUR_SECRET_KEY'); // Ваш секретный ключ Stripe
 const app = express();
 
 app.use(express.static('public'));
