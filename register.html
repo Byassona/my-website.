@@ -20,3 +20,11 @@
     }
   });
 </script>
+
+<script>
+  // Проверяем, авторизован ли пользователь
+  if (!localStorage.getItem('isLoggedIn') || localStorage.getItem('isLoggedIn') !== 'true') {
+    alert('Пожалуйста, войдите в систему!');
+    window.location.href = 'login.html';
+  }
+</script>
