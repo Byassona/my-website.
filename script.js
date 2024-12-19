@@ -13,16 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
 
       const userData = JSON.parse(localStorage.getItem(username));
+
       if (userData && userData.password === password) {
         localStorage.setItem('currentUser', username);
         window.location.href = 'index.html';
       } else if (username === 'Byassona' && password === 'Bilal57895') {
         localStorage.setItem('currentUser', username);
-        localStorage.setItem(username, JSON.stringify({ password, admin: true, proUser: true }));
+        localStorage.setItem(username, JSON.stringify({ password, proUser: true }));
         window.location.href = 'index.html';
       } else {
         alert('Неверное имя пользователя или пароль.');
@@ -35,27 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (registerForm) {
     registerForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (!username || !password) {
+        alert('Заполните все поля.');
+        return;
+      }
 
       if (localStorage.getItem(username)) {
         alert('Пользователь уже существует.');
-      } else {
-        localStorage.setItem(username, JSON.stringify({ password, proUser: false }));
-        alert('Регистрация прошла успешно.');
-        window.location.href = 'login.html';
+        return;
       }
+
+      localStorage.setItem(username, JSON.stringify({ password, proUser: false }));
+      alert('Регистрация успешна!');
+      window.location.href = 'login.html';
     });
   }
 
   // Главная страница
   if (currentUser && window.location.pathname.includes('index.html')) {
     const userData = JSON.parse(localStorage.getItem(currentUser));
-    const welcomeMessage = document.getElementById('welcome-message');
     const buyProBtn = document.getElementById('buy-pro-btn');
     const goToReports = document.getElementById('go-to-reports');
-
-    welcomeMessage.textContent = `Привет, ${currentUser}!`;
 
     if (userData.proUser) {
       goToReports.style.display = 'block';
