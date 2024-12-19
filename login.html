@@ -6,14 +6,16 @@
   <p>Нет аккаунта? <a href="register.html">Регистрация</a></p>
 </form>
 <script>
-  document.getElementById('login-form').addEventListener('submit', function(e) {
+  document.getElementById('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const storedUser = localStorage.getItem(username);
-    if (storedUser && JSON.parse(storedUser).password === password) {
+    const storedUser = JSON.parse(localStorage.getItem(username));
+    
+    if (storedUser && storedUser.password === password) {
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('username', username);
+      localStorage.setItem('isAdmin', storedUser.isAdmin || false);
       alert('Вход выполнен успешно!');
       window.location.href = 'index.html';
     } else {
