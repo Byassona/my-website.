@@ -22,7 +22,11 @@
     <a href="index.html" class="btn">Вернуться на главную</a>
   </main>
   <script>
-    if (localStorage.getItem('isLoggedIn') !== 'true' || localStorage.getItem('proUser') !== 'true') {
+    // Проверка доступа к странице "Отчёты"
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+    const isPro = localStorage.getItem('proUser') === 'true';
+
+    if (!isAdmin && !isPro) {
       alert('Требуется авторизация и покупка PRO!');
       window.location.href = 'login.html';
     }
