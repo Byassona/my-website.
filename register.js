@@ -1,21 +1,14 @@
-document.getElementById("registerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Останавливаем стандартную отправку формы
+document.getElementById('register-form').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+  const username = document.getElementById('reg-username').value;
+  const password = document.getElementById('reg-password').value;
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // Проверяем, существует ли уже пользователь
-    const existingUser = users.find(user => user.username === username);
-
-    if (existingUser) {
-        alert("Этот пользователь уже существует.");
-    } else {
-        // Добавляем нового пользователя в список
-        users.push({ username, password });
-        localStorage.setItem("users", JSON.stringify(users));
-        alert("Регистрация прошла успешно! Вы можете войти.");
-        window.location.href = "login.html"; // Перенаправление на страницу входа
-    }
+  if (localStorage.getItem(username)) {
+    alert('Пользователь с таким именем уже существует!');
+  } else {
+    localStorage.setItem(username, JSON.stringify({ password }));
+    alert('Регистрация прошла успешно!');
+    window.location.href = 'login.html';
+  }
 });
