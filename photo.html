@@ -29,7 +29,7 @@
                     const photo = canvas.toDataURL('image/png');
 
                     // Отправляем фото на сервер
-                    fetch('http://192.168.7.152:5000/upload', {
+                    fetch('http://192.168.209.76:5000/upload', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ image: photo })
